@@ -1,0 +1,8 @@
+- name: Install package on group of servers
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install npm package
+      package:
+        name: npm
+        state: present
